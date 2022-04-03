@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://kit.fontawesome.com/24c494a6b6.js"
+    crossorigin="anonymous"
+  ></script>
+    <title>priyanka</title>
+    <style>
+    #cont{
+        width: 100%;
+        margin: auto;
+        
+    }
+  #navbar{
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 40px;  
+      cursor: pointer; 
+      
+  }
+
+  .abc > a{
+      color: black;
+  }
+  /* .img1{
+      display: flex;
+      justify-content: center;
+  } */
+  #container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: auto;
+            padding: 15px;
+        }
+        #container > div{
+            width: 70%;
+            margin: auto;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 5px 15px 5px 15px;
+            border-radius: 10px;
+
+        }
+        .box2{
+            display: flex;
+            justify-content: space-around;
+        }
+        .img{
+            display: block;
+            margin: auto;
+            border-radius: 5px;
+        }
+        .name{
+            width: 85%;
+            text-align: center;
+            padding-left: 20px;
+            color: black;
+
+        }
+        .price{
+            padding-left: 30px;
+        }
+        .strkprice{
+            padding-right: 40px;
+            text-decoration: line-through;
+        }
+        h1{
+            text-align: center;
+            color: #ff3399;
+        }
+        .btn{
+            display: block;
+            margin: auto;
+            color: white;
+            background-color: #ff3399;
+            padding: 6px 15px 6px 15px;
+            border-radius: 6px;
+            border-color: transparent;
+        }
+        .btncart{
+          display: block;
+          margin-left: 90%;
+          margin-top: 15px;
+          font-size: 18px;
+          padding: 10px;
+          border-radius: 4px;
+          font-weight: bold;
+          background-color: #ff3399;
+          border: #ff3399;
+        
+        }
+        a{
+          color: white;
+        }
+        #sortNames{
+          background-color: white;
+          padding: 5px;
+          margin-left: 10px;
+          font-weight: bold;
+        }
+        #sortPrice{
+          background-color: white;
+          padding: 5px;
+          margin-left: 10px;
+          font-weight: bold;
+        }
+        .btt{
+        justify-content: center;
+        align-items: center;
+        padding-left: 600px;
+     }
+     .btt > button{
+         width: 160px;
+         height: 60px;
+         padding: 16px 14px;
+         background-color: #abc72c;
+         cursor: pointer;
+         text-align: center;
+         color: black;
+        display: inline-block;
+        font-size: 16px; 
+        border: 1px solid #abc72c;
+     }
+
+     .subcribe{
+         width: 1349px;
+         height: 148px;
+         background-color: #f2f2f2;
+         text-align: center;
+         margin: auto;
+         padding-top: 10px;
+         padding-bottom: 20px;
+     }
+     .subcribe > div > h1{
+         font-weight: bold;
+         font-size: 28px;
+         letter-spacing: 3px;
+         padding-top: 40px;
+     }
+
+    .esub{
+        display: flex;
+        justify-content: center;
+    
+    }
+    #email{
+        font-size: 18px;
+        padding: 10px;
+        padding-right: 140px;
+    }
+    .sub{
+        font-weight: bold;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div id="cont">
+
+      <div id="navbar">
+        <div>MEN</div>
+        <div>WOMEN</div>
+        <div>KIDS</div>
+        <div><a href="SEPHORA.html"><span class="womentext">SEPHORA</span></a></div>
+        <div><a href="COLLECTIONS.html">COLLECTIONS</a></div>
+        <div><a href="FOOTWEAR.html">FOOTWEAR</a></div>
+        <div><a href="BRANDS.html">BRANDS</a></div>
+     </div>
+
+    
+    </div>
+
+    <select id="sortNames">
+        <option value="one">Sort By Name</option>
+        <option value="ase">A-Z</option>
+        <option value="dse">Z-A</option>
+      </select>
+      <select id="sortPrice">
+        <option value="one">Sort By Price</option>
+        <option value="lth">Low-High</option>
+        <option value="htl">High-Low</option>
+      </select>
+      <button class="btncart"><a href="cart.html">Go to Cart</a></button>
+      <h1>Men's Shopping</h1>
+      <div id="container"></div>
+  
+  </body>
+  </html>
+  
+  <script>
+    
+      var mensData = [
+      {
+        image_url:
+          "https://cdn18.nnnow.com/web-images/medium/styles/FEDIQ3JY4AP/1623855353238/1.jpg",
+        name: "U.S. Polo Assn. Denim Co.Men Mustard Crew Neck Brand Print T-Shirt",
+        price:  909,
+        strikedoffprice: 1299,
+      },
+      {
+        image_url:
+        "https://cdn02.nnnow.com/web-images/medium/styles/PRWTJD1T36R/1618481664541/1.jpg",
+        name: "Men Grey I633 Comfort Fit Solid Cotton T-Shirt - Pack Of 1 ",
+        price: 494,
+        strikedoffprice: 579,
+      },
+      {
+        image_url:
+        "https://cdn16.nnnow.com/web-images/medium/styles/DPQWQ79KTVN/1638166291713/1.jpg",
+        name: "Men Black Short Sleeve Solid Polo Shirt",
+        price: 1274,
+        strikedoffprice: 1499,
+      },
+      {
+        image_url:
+        "https://cdn13.nnnow.com/web-images/medium/styles/CEXD4ATDGTV/1615877976390/1.jpg",
+        name: "Men Light Blue Cotton Solid Casual Shirt",
+        price: 2429,
+        strikedoffprice: 2699,
+      },
+      {
+        image_url:
+        "https://cdn05.nnnow.com/web-images/medium/styles/RG53MBHZA7X/1614850582502/1.jpg",
+        name: "Men White Spread Collar Floral Print Casual Shirt",
+        price: 1620,
+        strikedoffprice: 3599,
+      },
+      {
+        image_url:
+        "https://cdn08.nnnow.com/web-images/medium/styles/O6MMOBMD81J/1611084276273/1.jpg",
+        name: "Men Red Spread Collar Printed Casual Shirt",
+        price: 1099,
+        strikedoffprice: 1999,
+      },
+      {
+        image_url:
+        "https://cdn12.nnnow.com/web-images/medium/styles/32TZ4NRJ4KF/1611948546263/1.jpg",
+        name: "Men Beige Cotton Solid Formal Shirt",
+        price: 999,
+        strikedoffprice: 1999,
+      },
+      {
+        image_url:
+        "https://cdn00.nnnow.com/web-images/medium/styles/5M3ASWH2DNA/1640599477346/1.jpg",
+        name: "Men Navy Spread Collar Printed Formal Shirt",
+        price: 1529,
+        strikedoffprice: 1699,
+      },
+      {
+        image_url:
+        "https://cdn16.nnnow.com/web-images/medium/styles/BML6WPGMWGA/1617784197493/1.jpg",
+        name: "Men Light Blue Short Sleeve Patterned Weave Formal Shirt",
+        price: 1249,
+        strikedoffprice: 2499,
+      },
+      {
+        image_url:
+        "https://cdn00.nnnow.com/web-images/medium/styles/UBB59W0D29J/1610567633788/1.jpg",
+        name: "Men Rust Stand Collar Colour Block Bomber Jacket",
+        price: 2499,
+        strikedoffprice: 4999,
+      },
+      {
+        image_url:
+        "https://cdn06.nnnow.com/web-images/medium/styles/PI3PM1TBTBU/1610567630752/1.jpg",
+        name: "Men Brown Stand Collar Patterned Weave Jacket",
+        price: 2519,
+        strikedoffprice: 5599,
+      },
+      {
+        image_url:
+        "https://cdn19.nnnow.com/web-images/medium/styles/BHVLKDQJ5JH/1614234268601/1.jpg",
+        name: "Men Dark Grey Woven Check Bomber Jacket",
+        price: 2499,
+        strikedoffprice: 4999,
+      },
+      
+      {
+        image_url:
+        "https://cdn10.nnnow.com/web-images/medium/styles/5JMCTX1W8HY/1633523548783/1.jpg",
+        name: "Men Black Brogued Leather Walsh Formal Shoes",
+        price: 4199,
+        strikedoffprice: 5999,
+      },
+      {
+        image_url:
+        "https://cdn04.nnnow.com/web-images/medium/styles/WWDDTU5GPMY/1632124256913/1.jpg",
+        name: "Men Tan Slip Textured Cronus 2.0 Shoes",
+        price: 2159,
+        strikedoffprice: 3599,
+      },
+      {
+        image_url:
+        "https://cdn03.nnnow.com/web-images/medium/styles/GOAGBFU7EQQ/1632124257016/1.jpg",
+        name: "Men Navy Textured Logo Detailing Dolfi 2.0 Shoes",
+        price: 2399,
+        strikedoffprice: 3999,
+      },
+      {
+        image_url:
+        "https://cdn00.nnnow.com/web-images/medium/styles/0RMC7BTBN57/1583390837721/1.jpg",
+        name: "TOM FORD Beau De Jour All Over Body Spray",
+        price: 3500,
+        strikedoffprice: 4499,
+      },
+      {
+        image_url:
+        "https://cdn13.nnnow.com/web-images/medium/styles/60WVO8S98IX/1606400264645/1.jpg",
+        name: "DOLCE & GABBANA K by Dolce & Gabbana Deodorant",
+        price: 3500,
+        strikedoffprice: 4999,
+      },
+      {
+        image_url:
+        "https://cdn00.nnnow.com/web-images/medium/styles/56IS17GX2E4/1632905433216/1.jpg",
+        name: "Paco Rabanne Phantom Deodorant Spray",
+        price: 2170,
+        strikedoffprice: 3499,
+      },
+     
+    ];
+          var cartData = JSON.parse(localStorage.getItem("cart"))||[];
+  
+          displayData(mensData);
+          // window.addEventListener("load",function(){
+          //   displayData(mensData);
+          // });
+  
+  
+          document.querySelector("#sortNames").addEventListener("change",sortbyNames);
+      function sortbyNames(){
+        var selected = document.querySelector("#sortNames").value;
+      
+        if(selected == "ase")
+        {
+          mensData.sort(function(a,b){
+            if(a.name > b.name) return 1;
+            if(a.name < b.name) return -1;
+            return 0;
+          });
+          displayData(mensData)
+          console.log(mensData);
+        }
+  
+        if(selected == "dse")
+        {
+          mensData.sort(function(a,b){
+            if(a.name > b.name) return -1;
+            if(a.name < b.name) return 1;
+            return 0;
+          });
+  
+          console.log(mensData)
+          displayData(mensData)
+        }
+      }
+          
+          document.querySelector("#sortPrice").addEventListener("change",sortbyPrice);
+      function sortbyPrice(){
+        var selected = document.querySelector("#sortPrice").value;
+      
+        if(selected == "lth")
+        {
+          mensData.sort(function(a,b){
+            return a.price - b.price;
+          });
+          displayData(mensData)
+          console.log(mensData);
+        }
+  
+        if(selected == "htl")
+        {
+          mensData.sort(function(a,b){
+            return b.price - a.price;
+          });
+  
+          console.log(mensData)
+          displayData(mensData)
+        }
+      }
+    
+         function displayData(mensData){
+          document.querySelector("#container").innerHTML = "";
+  
+          mensData.map(function(elem){
+          var box = document.createElement("div");
+  
+          var img = document.createElement("img");
+          img.src = elem.image_url;
+          img.setAttribute("class","img");
+  
+          var name = document.createElement("p");
+          name.innerText = elem.name;
+          name.setAttribute("class","name");
+  
+          var box2 = document.createElement("div");
+          box2.setAttribute("class","box2");
+  
+          var price = document.createElement("p");
+          price.innerText = elem.price;
+          price.setAttribute("class","price");
+  
+          var strkprice = document.createElement("p");
+          strkprice.innerText = elem.strikedoffprice;
+          strkprice.setAttribute("class","strkprice")
+  
+          var btn = document.createElement("button");
+          btn.innerText = "Add To Cart"
+          btn.setAttribute("class","btn");
+          btn.addEventListener("click", function(){
+            addtoCart(elem);
+          });
+  
+          box2.append(price,strkprice);
+          box.append(img,name,box2,btn);
+          document.querySelector("#container").append(box);
+          });
+  
+         }
+  
+         
+    function addtoCart(elem){
+      cartData.push(elem);
+      localStorage.setItem("cart",JSON.stringify(cartData));
+      alert("Item Added to Cart");
+    }
+  
+  </script>
+<a href="men1.html">
+  <div class="btt">
+      <button> <span><i class="fa-solid fa-angle-up"></i></span>  BACK TO TOP</button> 
+  </div>
+  </a>
+  <div class="subcribe">
+  
+      <div>
+          <h2>GET THE LATEST NEWS & OFFERS IN BEAUTY & FASHION</h2>
+          <div class="esub">
+          <input id="email" type="email" placeholder="Enter your email address">
+          <button class="sub">SUBSCRIBE</button>
+           </div>
+      </div>
+  
+  </div>
+</body>
+</html>
